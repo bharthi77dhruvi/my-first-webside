@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharthi Dhruvi - Portfolio</title>
+
+    <style>
+        /* Aesthetic Colors */
+        :root {
+            --bg: #fcfaff;
+            --accent: #c9a7ff;
+            --accent-dark: #a67dff;
+            --text: #333;
+            --white: #fff;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: var(--accent);
+            padding: 22px 0;
+            text-align: center;
+            color: var(--white);
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            animation: slideDown 1.3s ease-in-out;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Slide animation */
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            width: 80%;
+            margin: 45px auto;
+            background: var(--white);
+            padding: 28px;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+            animation: fadeUp 1.2s ease;
+            position: relative;
+            z-index: 5;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+
+        /* Fade Up Animation */
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cute Emojis Title */
+        h2 {
+            color: var(--accent-dark);
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        /* Falling Hearts and Stars */
+        .falling {
+            position: fixed;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .item {
+            position: absolute;
+            top: -50px;
+            font-size: 24px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #e3d9fb;
+            transition: 0.3s;
+        }
+
+        th {
+            background: var(--accent);
+            color: white;
+        }
+
+        tr:hover td {
+            background: #f3eaff;
+        }
+
+        /* Skill Bubble Hover */
+        .skill-box {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 9px 18px;
+            margin: 6px;
+            border-radius: 25px;
+            font-size: 15px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .skill-box:hover {
+            background: var(--accent-dark);
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px 0;
+            background: var(--accent-dark);
+            color: white;
+            font-size: 16px;
+            margin-top: 40px;
+            animation: fadeUp 1.5s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- FALLING HEARTS & STARS CONTAINER -->
+    <div class="falling">
+        <!-- These will be duplicated with JS -->
+    </div>
+
+    <header>
+        🌸 Welcome to Bharthi Dhruvi’s Portfolio 🌸
+    </header>
+
+    <section id="about">
+        <h2>💖 About Me</h2>
+        <p>
+            Hi! I’m <strong>Bharthi Dhruvi</strong> ✨, a creative and passionate learner who loves 
+            exploring technology and designing aesthetic websites 🌷.  
+            I enjoy turning ideas into reality and believe in learning something new every day 💫.
+        </p>
+    </section>
+
+    <section id="study">
+        <h2>📚 Study Journey</h2>
+
+        <table>
+            <tr>
+                <th>Education 🎓</th>
+                <th>Institute 🏫</th>
+            </tr>
+            <tr>
+                <td>High School</td>
+                <td>Government Girls High School</td>
+            </tr>
+            <tr>
+                <td>Graduation</td>
+                <td>Noble University</td>
+            </tr>
+        </table>
+
+        <h3 style="color: var(--accent-dark); margin-top: 25px;">✨ Subjects I Studied</h3>
+
+        <table>
+            <tr>
+                <th>Subject 💡</th>
+                <th>Description ✍️</th>
+            </tr>
+            <tr>
+                <td>Web Technology</td>
+                <td>Basics of HTML & CSS</td>
+            </tr>
+            <tr>
+                <td>DBMS</td>
+                <td>Database & SQL Basics</td>
+            </tr>
+            <tr>
+                <td>C Programming</td>
+                <td>Logic building</td>
+            </tr>
+            <tr>
+                <td>C++ Programming</td>
+                <td>OOP fundamentals</td>
+            </tr>
+            <tr>
+                <td>OA</td>
+                <td>Office Tools</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2>💎 My Skills</h2>
+
+        <span class="skill-box">🔧 HTML</span>
+        <span class="skill-box">🎨 CSS</span>
+        <span class="skill-box">💻 C Language</span>
+        <span class="skill-box">🌟 C++</span>
+        <span class="skill-box">🗄️ DBMS</span>
+        <span class="skill-box">🧮 Office Automation</span>
+        <span class="skill-box">✨ Creativity</span>
+        <span class="skill-box">🤝 Teamwork</span>
+        <span class="skill-box">🧠 Problem Solving</span>
+    </section>
+
+    <section id="dream">
+        <h2>🌈 My Dream</h2>
+        <p>
+            My dream is to become a <strong>famous Web Developer or Web Designer</strong> 🌟  
+            and create beautiful, creative, and user-friendly websites 💕.  
+            With passion and dedication, I know I can achieve everything I dream of ✨.
+        </p>
+    </section>
+
+    <footer>
+        © 2025 💜 Designed with love by Bharthi Dhruvi 💜
+    </footer>
+
+    <!-- JAVASCRIPT FOR FALLING HEARTS & STARS -->
+    <script>
+        const fallingContainer = document.querySelector('.falling');
+        const symbols = ["💜", "✨", "💜", "⭐", "💜", "✨"];
+
+        function createFallingItem() {
+            const item = document.createElement("div");
+            item.classList.add("item");
+            item.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+
+            item.style.left = Math.random() * 100 + "vw";
+            item.style.fontSize = (20 + Math.random() * 20) + "px";
+            item.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+            fallingContainer.appendChild(item);
+
+            setTimeout(() => {
+                item.remove();
+            }, 9000);
+        }
+
+        setInterval(createFallingItem, 400);
+    </script>
+
+</body>
+</html>
